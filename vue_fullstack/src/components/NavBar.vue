@@ -21,6 +21,11 @@
             <li class="nav-item active">
                 <router-link to="/signup" class="nav-link">Register</router-link>
             </li>
+            
+            
+            <li class="nav-item active">
+                <router-link to="/about" class="nav-link">About</router-link>
+            </li>
         </ul>
 
         <div class="nav-item my-2 my-lg-0">
