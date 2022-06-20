@@ -40,8 +40,10 @@ const handleSignIn = async () => {
                             <div class="col-xl-12">
                                 <div class="auth-form">
                                 
-                                    <h2 class="text-center mb-4">Welcome !</h2>
+                                    <h2 class="text-center mb-4">Welcome Back!</h2>
                                     <h4 class="text-center text-muted">Login to continue</h4>
+
+                                    <br>
 
                                 
                                     <form method="post" class="needs-validation" novalidate>
@@ -55,6 +57,8 @@ const handleSignIn = async () => {
                                                 This field is mandatory.
                                             </div>
                                         </div>
+
+                                        <br>
                                         
                                         <div class="form-group">
                                             <label for="password" class="mb-1"><strong>Password *</strong></label>
@@ -65,6 +69,8 @@ const handleSignIn = async () => {
                                                 this field is mandatory.
                                             </div>
                                         </div>
+
+                                        <br>
 
                                         <div class="form-row d-flex justify-content-between mt-4 mb-2">
                                             <div class="form-group">
@@ -80,6 +86,8 @@ const handleSignIn = async () => {
                                             </div>
                                         </div>
 
+                                        <br>
+
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary text-white btn-block">Login</button>
                                         </div>
@@ -87,7 +95,7 @@ const handleSignIn = async () => {
                                     </form>
 
                                     <div class="new-account mt-3">
-                                        <p class="">You don't have an account yet ? <a class="text" style="color: #e4032e;" href="{% url 'register' %}"> Sign Up </a></p>
+                                        <p class="">You don't have an account yet ? <a class="text" style="color: #e4032e;" href="#"> Sign Up </a></p>
                                     </div>
 
                                 </div>
