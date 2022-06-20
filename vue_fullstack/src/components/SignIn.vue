@@ -49,7 +49,7 @@ const handleSignIn = async () => {
                                         <div class="form-group">
                                             <label for="email" class="mb-1"><strong>Email address *</strong></label>
 
-                                            <input type="email" style="color: black;" class="form-control" id="email" name="email" placeholder="Provide your email address" required>
+                                            <input type="email" style="color: black;" v-model="email" class="form-control" id="email" name="email" placeholder="Provide your email address" required>
 
                                             <div class="invalid-feedback">
                                                 This field is mandatory.
@@ -57,8 +57,9 @@ const handleSignIn = async () => {
                                         </div>
                                         
                                         <div class="form-group">
-                                            <label for="password" class="mb-1"><strong>PASSWORD *</strong></label>
-                                            <input type="password" style="color: black;" class="form-control" id="password" name="password" placeholder="Saisissez votre mot de passe" required>
+                                            <label for="password" class="mb-1"><strong>Password *</strong></label>
+                                            
+                                            <input type="password" style="color: black;" v-model="password" class="form-control" id="password" name="password" placeholder="Provide your password" required>
 
                                             <div class="invalid-feedback">
                                                 this field is mandatory.
@@ -67,11 +68,13 @@ const handleSignIn = async () => {
 
                                         <div class="form-row d-flex justify-content-between mt-4 mb-2">
                                             <div class="form-group">
-                                            <div class="custom-control custom-checkbox ml-1">
-                                                    <input type="checkbox" style="color: black;" class="custom-control-input" id="basic_checkbox_1">
+
+                                                <div class="custom-control custom-checkbox ml-1">
+                                                    <input type="checkbox" style="color: black;" class="custom-control-input" v-model="isChecked" id="basic_checkbox_1">
                                                     <label class="custom-control-label" for="basic_checkbox_1">Remember me</label>
                                                 </div>
                                             </div>
+
                                             <div class="form-group">
                                                 <a class="" href="#">Forgot password ?</a>
                                             </div>
@@ -100,34 +103,13 @@ const handleSignIn = async () => {
     </div>
 
 
-
-    <h1> Sign In </h1>
-
-    <form class="my-3" @submit.prevent="handleSignIn">
-        <div class="form-group">
-        
-            <label for="exampleInputEmail1">Email</label>
-
-            <input type="email" class="form-control" placeholder="Provide your email ..." v-model="email" />
-
-        </div>
-        
-        <div class="form-group">
-            <label for="exampleInputPassword1">Mot de passe</label>
-
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Provide your password" v-model="password" />
-        </div>
-
-        <div class="form-check">
-
-            <input type="checkbox" class="form-check-input" id="exampleCheck1" v-model="isChecked" />
-            
-            <label class="form-check-label" for="exampleCheck1">
-                Souvnenir de moi
-            </label>
-
-        </div>
-
-        <button type="submit" class="btn btn-primary"> Login </button>
-    </form>
 </template>
+
+
+<style>
+
+    .invalid { border-color: red; }
+
+    #error { color: red }
+
+</style>
