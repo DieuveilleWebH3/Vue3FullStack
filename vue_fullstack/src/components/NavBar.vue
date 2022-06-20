@@ -116,10 +116,12 @@
         </MDBDropdownMenu>
 
         <!-- The logic here is : when a user is connected, they see dropdown for logout and profile -->
+        <!--
         <MDBDropdownMenu>
             <MDBDropdownItem to="/profile" href="#"> Profile </MDBDropdownItem>
             <MDBDropdownItem to="/logout" href="#"> Logout </MDBDropdownItem>
         </MDBDropdownMenu>
+        -->
 
         </MDBDropdown>
 
