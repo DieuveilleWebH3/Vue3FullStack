@@ -1,28 +1,32 @@
 <script setup>
-import { ref, watch } from "vue";
-import axios from "axios";
-import router from "../router";
 
-const email = ref("");
-const password = ref("");
-const isChecked = ref(false);
+    import { ref, watch } from "vue";
+    import axios from "axios";
+    import router from "../router";
 
-const handleSignIn = async () => {
-  console.log(email.value, password.value);
-  try {
-    const res = await axios.post("http://localhost:5000/user/login", {
-      email: email.value,
-      password: password.value,
-    });
-    console.log(res.data);
-    if (isChecked.value) {
-      localStorage.setItem("user", JSON.stringify(res.data));
-    }
-    // router.push({ name: "home" });
-  } catch (err) {
-    console.log(err.message);
-  }
-};
+    const email = ref("");
+    const password = ref("");
+    const isChecked = ref(false);
+
+    const handleSignIn = async () => {
+
+        try {
+            const res = await axios.post("http://localhost:5000/user/login", {
+                email: email.value,
+                password: password.value,
+            });
+
+            if (isChecked.value) {
+                localStorage.setItem("user", JSON.stringify(res.data));
+            }
+
+        } 
+        
+        catch (err) 
+        {
+            console.log(err.message);
+        }
+    };
 </script>
 
 <template>
